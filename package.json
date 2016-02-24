@@ -11,21 +11,21 @@
     "jade": "^1.9.2",
     "prefiks": "^0.3.3"
   },
-  "name": "initial",
+  "name": "orji3",
   "version": "1.0.0",
-  "description": "Initial setup for a gulp + react web project.",
+  "description": "I will fill this field later.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:kindaro/initial.git"
+    "url": "git@github.com:kindaro/orji3.git"
   },
   "author": "Ignat Insarov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kindaro/initial/issues"
+    "url": "https://github.com/kindaro/orji3/issues"
   },
-  "homepage": "https://github.com/kindaro/initial"
+  "homepage": "https://github.com/kindaro/orji3"
 }
