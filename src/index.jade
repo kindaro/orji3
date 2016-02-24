@@ -1,8 +1,480 @@
 doctype html
-html(lang='en')
-    head
-        include _include/head
-    body
-        header
-        main
-        footer
+//if IE 8 
+  html.no-js.oldie.ie8(lang='en')  
+//if IE 9 
+  html.no-js.oldie.ie9(lang='en')  
+// [if (gte IE 9)|!(IE)] <!
+html.no-js(lang='en')
+  // <![endif]
+  head
+    //
+      - basic page needs
+      ==================================================
+    meta(charset='utf-8')
+    title Реклама на 31
+    meta(name='description', content='')
+    meta(name='author', content='')
+    //
+      mobile specific metas
+      ==================================================
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    //
+      CSS
+      ==================================================
+    link(rel='stylesheet', href='css/base.css')
+    link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='css/vendor.css')
+    //
+      script
+      ==================================================
+    script(src='js/modernizr.js')
+    //
+      favicons
+      ==================================================
+    link(rel='icon', type='image/png', href='favicon.png')
+  body#top
+    //
+      header
+      ==================================================
+    header
+      .row
+        .logo
+          a(href='index.html') 31 канал
+        nav#main-nav-wrap
+          ul.main-navigation
+            li.current
+              a.smoothscroll(href='#intro', title='') Начало
+            li
+              a.smoothscroll(href='#process', title='') Что делаем
+            li
+              a.smoothscroll(href='#features', title='') Особенности
+            li
+              a.smoothscroll(href='#pricing', title='') Цены
+            li
+              a.smoothscroll(href='#faq', title='') Подробности
+            li.highlight.with-sep
+              a(href='#', title='') Заказать
+        a.menu-toggle(href='#')
+          span Меню
+    // /header
+    //
+      intro section
+      ==================================================
+    section#intro
+      .shadow-overlay
+      .intro-content
+        .row
+          .col-twelve
+            .video-link
+              a(href='#video-popup')
+                img(src='images/play-button.png', alt='')
+            h5 Добро пожаловать на 31 канал!
+            h1 Реклама у нас сделает Вам продажи.
+            a.button.stroke.smoothscroll(href='#process', title='') Интересно
+      //
+        Modal Popup
+        =========================================================
+      #video-popup.popup-modal.mfp-hide
+        .fluid-video-wrapper
+          iframe(src='http://player.vimeo.com/video/14592941?title=0&byline=0&portrait=0&color=faec09', width='500', height='281', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+        a.close-popup Close
+      // /video-popup
+    // /intro
+    //
+      Process Section
+      ==================================================
+    section#process
+      .row.section-intro
+        .col-twelve.with-bottom-line
+          h5 Процесс
+          h1 Что делаем?
+          p.lead
+            | Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+      .row.process-content
+        .left-side
+          .item(data-item='1')
+            h5 Цель.
+            p
+              | Lorem ipsum Cupidatat nostrud non cupidatat ut dolor id eiusmod non minim aute consectetur incididunt tempor irure aute consequat quis voluptate.
+          .item(data-item='2')
+            h5 Дизайн.
+            p
+              | Lorem ipsum Cupidatat nostrud non cupidatat ut dolor id eiusmod non minim aute consectetur incididunt tempor irure aute consequat quis voluptate.
+        // /left-side
+        .right-side
+          .item(data-item='3')
+            h5 Разработка.
+            p
+              | Lorem ipsum Cupidatat nostrud non cupidatat ut dolor id eiusmod non minim aute consectetur incididunt tempor irure aute consequat quis voluptate.
+          .item(data-item='4')
+            h5 Запуск!
+            p
+              | Lorem ipsum Cupidatat nostrud non cupidatat ut dolor id eiusmod non minim aute consectetur incididunt tempor irure aute consequat quis voluptate.
+        // /right-side
+        .image-part(style='width: 0')
+      // /process-content
+    // /process
+    //
+      features Section
+      ==================================================
+    section#features
+      .row.section-intro
+        .col-twelve.with-bottom-line
+          h5 Особенности
+          h1 Вы оцените наши преимущества!
+          p.lead
+            | Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+      .row.features-content
+        .features-list.block-1-3.block-s-1-2.block-tab-full.group
+          .bgrid.feature
+            span.icon
+              i.icon-window
+            .service-content
+              h3.h05 Сто лет в обед
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+          // /bgrid
+          .bgrid.feature
+            span.icon
+              i.icon-eye
+            .service-content
+              h3.h05 Высокое качество
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+          // /bgrid
+          .bgrid.feature
+            span.icon
+              i.icon-paint-brush
+            .service-content
+              h3.h05 Красиво делаем
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+          // /bgrid
+          .bgrid.feature
+            span.icon
+              i.icon-file
+            .service-content
+              h3.h05 Аккуратно
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+          // /bgrid
+          .bgrid.feature
+            span.icon
+              i.icon-layers
+            .service-content
+              h3.h05 Индивидуальный подход
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+          // /bgrid
+          .bgrid.feature
+            span.icon
+              i.icon-gift
+            .service-content
+              h3.h05 Строго в срок!
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+          // /bgrid
+        // features-list
+      // features-content
+    // /features
+    //
+      pricing
+      ==================================================
+    section#pricing
+      .row.section-intro
+        .col-twelve.with-bottom-line
+          h5 Цены
+          h1 Выберите то, что вам подходит.
+          p.lead
+            | Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+      .row.pricing-content
+        .pricing-tables.block-1-4.group
+          .bgrid
+            .price-block
+              .top-part
+                h3.plan-title Немножко
+                p.plan-price
+                  sup T
+                  | 10 000
+                p.price-month В месяц
+                p.price-meta Подписка на год.
+              .bottom-part
+                ul.features
+                  li
+                    strong 100 минут
+                    |  Показ в день
+                  li
+                    strong До 10 секунд
+                    |  Длина ролика
+                  // li
+                  //   strong 5
+                  //   |  Databases
+                  // li
+                  //   strong 30
+                  //   |  Email Accounts
+                a.button.large(href='') Подходит!
+          // /price-block
+          .bgrid
+            .price-block.primary
+              .top-part(data-info='Советуем')
+                h3.plan-title Нормально
+                p.plan-price
+                  sup T
+                  | 50 000
+                p.price-month В месяц
+                p.price-meta Подписка на год.
+              .bottom-part
+                ul.features
+                  li
+                    strong 200 минут
+                    |  Показ в день
+                  li
+                    strong До 20 секунд
+                    |  Длина ролика
+                  // li
+                  //   strong 7
+                  //   |  Databases
+                  // li
+                  //   strong 40
+                  //   |  Email Accounts
+                a.button.large(href='') Подходит!
+          // /price-block
+          // .bgrid
+          //   .price-block
+          //     .top-part
+          //       h3.plan-title Premium
+          //       p.plan-price
+          //         sup $
+          //         | 19.99
+          //       p.price-month Per month
+          //       p.price-meta Billed Annually.
+          //     .bottom-part
+          //       ul.features
+          //         li
+          //           strong 10GB
+          //           |  Storage
+          //         li
+          //           strong 30GB
+          //           |  Bandwidth
+          //         li
+          //           strong 15
+          //           |  Databases
+          //         li
+          //           strong 60
+          //           |  Email Accounts
+          //       a.button.large(href='') Get Started
+          // /price-block
+          // .bgrid
+          //   .price-block
+          //     .top-part
+          //       h3.plan-title Ultimate
+          //       p.plan-price
+          //         sup $
+          //         | 29.99
+          //       p.price-month Per month
+          //       p.price-meta Billed Annually.
+          //     .bottom-part
+          //       ul.features
+          //         li
+          //           strong 20GB
+          //           |  Storage
+          //         li
+          //           strong 40GB
+          //           |  Bandwidth
+          //         li
+          //           strong 25
+          //           |  Databases
+          //         li
+          //           strong 100
+          //           |  Email Accounts
+          //       a.button.large(href='') Get Started
+          // /price-block
+        // /pricing-tables
+      // /pricing-content
+    // /pricing
+    //
+      Testimonials Section
+      ==================================================
+    section#testimonials
+      .row
+        .col-twelve
+          h2.h01 Что о нас говорят
+      .row.flex-container
+        #testimonial-slider.flexslider
+          ul.slides
+            li
+              .testimonial-author
+                img(src='images/avatars/avatar-1.jpg', alt='Author image')
+                .author-info
+                  | Мэг Джей
+                  span.position Писатель.
+              p
+                | Парадоксально — то, что происходит с нами в двадцать с лишним лет, кажется не таким уж важным,
+                | но именно возраст от 20 до 30 лет является критическим этапом взросления,
+                | в который легче всего заложить основы будущей счастливой жизни.
+            // /slide
+            li
+              .testimonial-author
+                img(src='images/avatars/avatar-2.jpg', alt='Author image')
+                .author-info
+                  | Аль Пачино
+                  span Актёр.
+              p
+                | Секрет в том, чтобы общаться с теми, кто лучше.
+                | Драться с теми, кто сильнее.
+                | Любить того, кого нельзя.
+                | Не умирать там, где умирают другие.
+            // /slide
+          // /slides
+        // /testimonial-slider
+      // /flex-container
+    // /testimonials
+    //
+      faq
+      ==================================================
+    section#faq
+      .row.section-intro
+        .col-twelve.with-bottom-line
+          h5 Подробности
+          h1 Ответы на частые вопросы.
+          p.lead
+            | Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.
+      .row.faq-content
+        .q-and-a.block-1-2.block-tab-full.group
+          .bgrid
+            h3 Это реально помогает увеличить продажи?
+            p
+              | Lorem ipsum Id in magna ad culpa dolor eu aute non amet aute ea in consectetur in quis nostrud anim proident dolore in sed et mollit voluptate culpa irure consequat laborum ea sint in mollit adipisicing cupidatat.
+          .bgrid
+            h3 С какой суммы можно начать продвижение?
+            p
+              | Lorem ipsum Id in magna ad culpa dolor eu aute non amet aute ea in consectetur in quis nostrud anim proident dolore in sed et mollit voluptate culpa irure consequat laborum ea sint in mollit adipisicing cupidatat.
+          .bgrid
+            h3 У кого заказать хороший ролик?
+            p
+              | Lorem ipsum Id in magna ad culpa dolor eu aute non amet aute ea in consectetur in quis nostrud anim proident dolore in sed et mollit voluptate culpa irure consequat laborum ea sint in mollit adipisicing cupidatat.
+          // .bgrid
+          //   h3 Can I upgrade my account from Starter to Premium?
+          //   p
+          //     | Lorem ipsum Id in magna ad culpa dolor eu aute non amet aute ea in consectetur in quis nostrud anim proident dolore in sed et mollit voluptate culpa irure consequat laborum ea sint in mollit adipisicing cupidatat.
+          // .bgrid
+          //   h3 Where can I found all my uploads?
+          //   p
+          //     | Lorem ipsum Id in magna ad culpa dolor eu aute non amet aute ea in consectetur in quis nostrud anim proident dolore in sed et mollit voluptate culpa irure consequat laborum ea sint in mollit adipisicing cupidatat.
+          // .bgrid
+          //   h3 How long can I use the free trial version?
+          //   p
+          //     | Lorem ipsum Id in magna ad culpa dolor eu aute non amet aute ea in consectetur in quis nostrud anim proident dolore in sed et mollit voluptate culpa irure consequat laborum ea sint in mollit adipisicing cupidatat.
+        // /q-and-a
+      // /faq-content
+      // .row.section-ads
+      //   .col-twelve
+      //     .ad-content
+      //       h2.h01
+      //         a(href='http://www.dreamhost.com/r.cgi?287326|STYLESHOUT') Styleshout Recommends Dreamhost.
+      //       p.lead
+      //         | Looking for an awesome and reliable webhosting? Try 
+      //         a(href='http://www.dreamhost.com/r.cgi?287326|STYLESHOUT')
+      //           span DreamHost
+      //         | .
+      //         span $50 off
+      //         |  when you sign up with the promocode 
+      //         span styleshout
+      //         | .
+      //         // Simply type	the promocode in the box labeled “Promo Code” when placing your order.
+      //       .action
+      //         a.button.large.round(href='http://www.dreamhost.com/r.cgi?287326|STYLESHOUT') Sign Up Now
+      // /section-ads
+    // /faq
+    //
+      cta
+      ==================================================
+    section#cta
+      .row.cta-content
+        .col-twelve
+          h1.h01 Раньше запустишь &mdash; больше продашь!
+          p.lead Свяжись с нами сегодня:
+          ul.stores
+            li.app-store
+              a.button.round.large(href='#', title='')
+                i.icon.ion-social-apple
+                | +7 707 128 16 37
+            li.play-store
+              a.button.round.large(href='#', title='')
+                i.icon.ion-social-android
+                | ad@31.kz
+            li.windows-store
+              a.button.round.large(href='#', title='')
+                i.icon.ion-social-windows
+                | advertizing_31
+      // /cta-content
+    // /cta
+    //
+      footer
+      ==================================================
+    footer
+      .footer-main
+        .row
+          .col-four.tab-full.mob-full.footer-info
+            .footer-logo
+            p
+              | Казахстан, Актау, 26-13-64
+              br
+              br
+          // /footer-info
+          .col-two.tab-1-3.mob-1-2.site-links
+            h4 Для справки
+            ul
+              li
+                a(href='#') Команда
+              li
+                a(href='#') Новости
+              li
+                a(href='#') Условия
+          //site-links
+          .col-two.tab-1-3.mob-1-2.social-links
+            h4 Мы в Интернете
+            ul
+              li
+                a(href='#') VK
+              li
+                a(href='#') Facebook
+              li
+                a(href='#') Youtube
+              li
+                a(href='#') Instagram
+          //social
+          .col-four.tab-1-3.mob-full.footer-subscribe
+            h4 Подпишись
+            p Будь в курсе. Подпишись на новости.
+            .subscribe-form
+              form#mc-form.group(novalidate='true')
+                input#mc-email.email(type='email', value='', name='dEmail', placeholder='е-мэйл', required='')
+                input(type='submit', name='subscribe')
+                label.subscribe-message(for='mc-email')
+          // /subscribe
+        // /row
+      // /footer-main
+      .footer-bottom
+        .row
+          .col-twelve
+            .copyright
+              span &copy; Все права защищены.
+              span
+                | Разработано 
+                a(href='http://www.styleshout.com/') II 
+                | &nbsp;при участии 
+                a(href='http://www.styleshout.com/') styleshout 
+            #go-top(style='display: block;')
+              a.smoothscroll(title='Back to Top', href='#top')
+                i.icon.ion-android-arrow-up
+        // /footer-bottom
+    #preloader
+      #loader
+    //
+      Java Script
+      ==================================================
+    script(src='js/jquery-1.11.3.min.js')
+    script(src='js/jquery-migrate-1.2.1.min.js')
+    script(src='js/plugins.js')
+    script(src='js/main.js')
